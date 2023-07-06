@@ -1,0 +1,86 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+@media (max-width: 768px) {
+    /* Styles for small screens */
+}
+
+a {
+    font-size: 20px;
+}
+
+
+/* CSS for screens with a minimum width of 769px */
+
+@media (min-width: 769px) {
+    /* Styles for larger screens */
+}
+
+@media screen and (max-width: 500px) {
+    nav ul li a {
+        float: none;
+        display: block;
+    }
+}
+
+nav {
+    position: relative;
+    margin: 0 auto 0;
+    margin-right: -12cm;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+    html,
+    body {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        display: inline-block;
+        white-space: nowrap;
+    }
+}
+
+* {
+    margin: 0;
+}
+
+.material-icons.color_white {
+    color: #FFFFFF;
+}
+
+.material-icons {
+    margin-left: 27cm;
+    width: 20px;
+}
+
+nav ul li a.nav-link:not(.active):hover {
+    text-decoration: none;
+}
+
+nav ul li a.nav-link:not(.active):focus {
+    outline: none;
+}
+
+mat-icon {
+    transform: scale(1.8);
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 100px) {
+    nav ul li a {
+        font-size: 16px;
+        /* Decrease size for smaller screens */
+        margin-right: 500px;
+        /* Decrease size for smaller screens */
+    }
+}
+
+html,
+body {
+    font-family: HelveticaNeue3;
+}

@@ -1,0 +1,195 @@
+html {
+    font-family: HelveticaNeue3;
+    line-height: 1.5;
+    font-size: 1em;
+}
+
+body {
+    overflow-x: hidden;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+input {
+    font-family: inherit;
+    line-height: inherit;
+    color: #2e3750;
+    min-width: 12em;
+}
+
+::placeholder {
+    color: #cbd0d5;
+}
+
+html::after {
+    content: '';
+    background: linear-gradient(21deg, #10abff, #1beabd);
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+fieldset {
+    background-color: #ebebebf1;
+    border-radius: 40px;
+    margin: 0;
+}
+
+body {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.search-bar {
+    margin: auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    width: 400px;
+    background-color: rgb(255, 102, 0);
+    border-radius: 30px;
+    padding: 5px;
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: white;
+}
+
+.search-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    color: rgb(0, 0, 0);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.search-icon i {
+    font-size: 20px;
+}
+
+::placeholder {
+    color: rgb(255, 255, 255);
+    opacity: 1;
+}
+
+.material-icons.color_white {
+    color: #FFFFFF;
+}
+
+* {
+    margin: 0;
+}
+
+legend {
+    color: rgb(239, 78, 3);
+    font-weight: normal;
+    padding: 0 5px;
+    text-align: left;
+    border-bottom: none;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    position: absolute;
+    /*absolutely position the legend*/
+    left: 8cm;
+    /*position the legend 1px to the right so that it overlaps the border*/
+    top: 3.8cm;
+    /*position the legend 1px down from the top that it overlaps the border*/
+}
+
+input {
+    margin: 0.4rem;
+}
+
+.field_set {
+    width: 20cm;
+    margin: auto;
+    text-align: center;
+    height: 10cm;
+    box-shadow: 5px 5px 20px rgb(94, 93, 93);
+}
+
+input[type=radio]#orange {
+    accent-color: rgb(255, 110, 37);
+}
+
+$color1: #f4f4f4;
+$color2: #f76f00;
+.radio {
+    margin: 0.5rem;
+    input[type="radio"] {
+        position: absolute;
+        opacity: 0;
+        +.radio-label {
+            &:before {
+                content: '';
+                background: $color1;
+                border-radius: 100%;
+                border: 2px solid darken($color1, 25%);
+                display: inline-block;
+                width: 1.4em;
+                height: 1.4em;
+                position: relative;
+                top: -0.2em;
+                margin-right: 1em;
+                vertical-align: top;
+                cursor: pointer;
+                text-align: center;
+                transition: all 250ms ease;
+            }
+        }
+        &:checked {
+            +.radio-label {
+                &:before {
+                    background-color: $color2;
+                    box-shadow: inset 0 0 0 4px $color1;
+                }
+            }
+        }
+        &:focus {
+            +.radio-label {
+                &:before {
+                    outline: none;
+                    border-color: $color2;
+                }
+            }
+        }
+        &:disabled {
+            +.radio-label {
+                &:before {
+                    box-shadow: inset 0 0 0 4px $color1;
+                    border-color: darken($color1, 25%);
+                    background: darken($color1, 25%);
+                }
+            }
+        }
+        +.radio-label {
+            &:empty {
+                &:before {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

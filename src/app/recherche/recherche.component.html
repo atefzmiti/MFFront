@@ -1,0 +1,59 @@
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<div class="example-container">
+    <fieldset class="field_set">
+        <br>
+        <br><br>
+        <div class="search">
+
+            <div class="p" style="margin-left: -5cm; font-weight: bold;">
+
+                La mesure financiére porte sur : </div>
+            <br>
+            <br>
+            <div class="container">
+
+                <div class="radio" style="margin-left: -0.7cm;">
+                    <input id="radio-1" name="radio" type="radio" checked>
+                    <label for="radio-1" class="radio-label">Client fixe</label>
+                </div>
+                <br>
+
+                <div class="radio">
+                    <input id="radio-2" name="radio" type="radio">
+                    <label for="radio-2" class="radio-label">Client internet</label>
+                </div>
+            </div>
+
+
+
+
+
+            <br><br>
+
+
+
+
+            <!--  <div class="search-bar">
+                <input type="text" placeholder="Veuillez saisir l'identifiant internet ...">
+                <span class="search-icon"><i class="fa fa-search"></i></span>
+            </div> -->
+            <div class="search-bar">
+                <input [(ngModel)]="userId" type="text" placeholder="Veuillez saisir l'identifiant internet ...">
+                <span (click)="redirectToUserHistoryOfCustomerProblems()" class="search-icon"><mat-icon matPrefix>search</mat-icon></span>
+
+            </div>
+        </div>
+    </fieldset>
+
+
+</div>
+
+<br>
+<br>

@@ -1,0 +1,182 @@
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+    </script>
+    <script src="src/assets/create.js"></script>
+
+
+</head>
+
+<body>
+
+
+
+    <hr class="line">
+    <div style="float: right; margin-right: 3cm; "><span>*</span><span></span> <b>Champs obligatoires</b></div>
+
+    <div class="coolContainer">
+        <br>
+        <br>
+        <br>
+        <h4><b style="margin-top: 0.2cm; margin-right: 0.2cm;">CUID Conseiller </b>
+            <input disabled="" type="text" class="form-control" style="width: 3cm; border-left: 5px solid #ff6f15; border-radius: 30px ; border-color: #ff6f15; " id="alterEgo" value="CVSX1997" name="alterEgo">
+        </h4>
+
+        <h4><b style="margin-top: 0.2cm; margin-right: 0.2cm;">Numéro incident  </b>
+            <input type="text" class="form-control" style="width: 4cm; border-left: 5px solid #ff6f15; border-radius: 30px ; border-color: #ff6f15; " id="alterEgo" name="alterEgo">
+        </h4>
+    </div>
+    <div class="parent">
+        <h2>Créer une mesure financiére</h2>
+
+
+    </div>
+
+    <div class="container">
+        <fieldset style=" border-radius: 40px; background-color: #ebebebf1;     box-shadow: 5px 5px 20px rgb(94, 93, 93);        ">
+
+            <div [hidden]="submitted">
+
+
+                <br>
+                <br>
+                <br>
+                <div class="textcontainer">
+                    <div class="comment">
+                        <textarea class="textinput" placeholder="Veuillez decrire la mesure financiére"></textarea>
+                    </div>
+                </div>
+                <div style="height: 3cm;">
+
+                </div>
+                <!-- NOT SHOWN IN DOCS -->
+
+                <!-- - -->
+
+                <div class='parent'>
+                    <div class='division'>
+                        <div class="select">
+
+                            <select [(ngModel)]="selectedType" (change)="onTypeSelected()">
+                                <option selected>--Choisir une typologie--
+                                </option>
+                                <option *ngFor="let item of typeDictionary | keyvalue" [value]="item.key">{{ item.value }}</option>
+        
+      </select>
+
+
+                        </div>
+                        <span>*</span>
+
+                        <div class="select">
+
+                            <select [(ngModel)]="selectedReason">
+                                <option selected disabled> --Choisir un motif--
+                                </option>
+                                <option *ngFor="let reason of reasonss" >{{ reason.label }}</option>
+                              </select>
+
+                        </div>
+                        <span>*</span>
+                        <div class="select" style="margin-left: 1cm;">
+                            <select (change)="handleOptionChange()">
+                                <option value="1"  selected >--Choisir un montant--
+                                </option>
+
+                                <option *ngFor="let amount of amounts" value="2">{{amount.label}}</option>
+                                
+                            </select>
+                        </div>
+                        <span>*</span>
+                        <b style="margin-top: 0.2cm; margin-left: 1cm ;">ou</b>
+                        <div class="form-group" style="margin-left: 1cm ;">
+
+                            <input type="text" [disabled]="isInputDisabled" placeholder="saisir un montant" class="form-control" id="alterEgo" name="alterEgo" style="border-left: 5px solid #ff6f15; border-radius: 30px ; border-color: #ff6f15; ">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class='parent'>
+                    <div class="division" style="margin-left: 8cm;">
+                        <div class="form-check">
+                            <input class="form-check-input" style="margin-top: 0.3cm; font-size: 23px;" type="radio" name="contactMethod" id="phoneRadio" (change)="disableEmail()" [checked]="selectedContactMethod === 'email'">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="saisir un email" class="form-control" id="emailInput" name="emailInput" style="border-left: 5px solid #ff6f15; border-radius: 30px; border-color: #ff6f15;" [disabled]="selectedContactMethod === 'phone'">
+                        </div>
+
+                        <b style="margin-top: 0.2cm; margin-left: 1.5cm;">ou</b>
+
+                        <div class="form-check" style="margin-left: 2cm;">
+                            <input class="form-check-input" style="margin-top: 0.3cm; font-size: 23px;" type="radio" name="contactMethod" id="emailRadio" (change)="disablePhone()" [checked]="selectedContactMethod === 'phone'">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="saisir un numéro de tél ..." class="form-control" id="phoneInput" name="phoneInput" style="border-left: 5px solid #ff6f15; border-radius: 30px; border-color: #ff6f15;" [disabled]="selectedContactMethod === 'email'">
+                        </div>
+                    </div>
+
+
+
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="wrap">
+                <button class="button" style="margin-right: 2cm;">Valider</button>
+                <button type="reset" class="button">Reset</button>
+            </div>
+            <br>
+
+
+
+            <br>
+
+
+            <br>
+            <div class="wrap" style=" margin-left: 1cm; margin-bottom: 1cm; justify-content: start">
+                <button routerLink="/" class="button">Retour</button>
+            </div>
+
+
+
+        </fieldset>
+
+
+    </div>
+
+    <br>
+
+    <!-- ====================================================  -->
+    <div>
+        <form>
+
+            <!-- ... all of the form ... -->
+
+        </form>
+    </div>
+
+
+    <!-- ====================================================  -->
+
+
+    <script>
+        $('#amountSelect').change(function() {
+            if ($(this).val() == 1) {
+                $('#alterEgo').prop("disabled", false);
+            } else {
+                $('#alterEgo').prop("disabled", true);
+            }
+        });
+    </script>
+
+
+
+</body>

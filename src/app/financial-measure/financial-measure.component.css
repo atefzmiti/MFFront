@@ -1,0 +1,142 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url('https://unpkg.com/bootstrap@3.3.7/dist/css/bootstrap.min.css');
+table {
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    width: 90%;
+    border-radius: 50px;
+}
+
+.coolContainer {
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+    background-color: rgb(20, 248, 172);
+}
+
+.coolContainer h4:first-of-type {
+    float: left;
+    margin-left: 2cm;
+}
+
+.coolContainer span:first-of-type {
+    float: left;
+    margin-left: 2cm;
+}
+
+.coolContainer span:last-of-type {
+    float: right;
+    margin-right: 2cm;
+}
+
+.coolContainer h4:last-of-type {
+    float: right;
+}
+
+th {
+    color: rgb(255, 106, 0);
+}
+
+th {
+    border-radius: 40px;
+}
+
+div.table-responsive {
+    overflow-x: auto;
+}
+
+html,
+body {
+    text-align: center;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.centered {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .centered {
+        font-size: 18px;
+        /* Decrease font size for smaller screens */
+    }
+}
+
+@media (min-width: 48rem) {
+    h1 {
+        font-size: 3em;
+    }
+    h2 {
+        font-size: 2.25em;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 1.5em;
+    }
+}
+
+h4 {
+    justify-content: flex-end;
+    display: flex;
+    margin-right: 2cm;
+}
+
+button {
+    border-radius: 50%;
+    margin-left: 3cm;
+    text-align: center;
+}
+
+section {
+    display: table;
+}
+
+.example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+}
+
+.example-button-row {
+    display: table-cell;
+    max-width: 600px;
+}
+
+.example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+}
+
+button {
+    top: 2cm;
+    left: 3cm;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+h2 {
+    padding: 40px;
+    color: rgb(0, 0, 0);
+    text-shadow: 2px 2px 2px rgb(94, 93, 93);
+    border-radius: 60px;
+}

@@ -1,0 +1,8 @@
+<p>example works!</p>
+<select [(ngModel)]="selectedType" (change)="onTypeSelected()">
+    <option *ngFor="let type of types" [value]="type">{{ type }}</option>
+  </select>
+
+<select [(ngModel)]="selectedReason">
+    <option *ngFor="let reason of reasons" [value]="reason">{{ reason.label }}</option>
+  </select>
